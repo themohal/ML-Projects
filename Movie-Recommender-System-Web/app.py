@@ -3,7 +3,7 @@ import pickle
 import pandas as pd
 import requests
 
-movies = pickle.load(open('./movies.pkl','rb'))
+movies = pickle.load(open('Movie-Recommender-System-Web/movies.pkl','rb'))
 movies = pd.DataFrame(movies)
 similarity = pickle.load(open('similarity.pkl','rb'))
 
