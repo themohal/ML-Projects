@@ -4,7 +4,7 @@ import pickle
 import pandas as pd
 
 
-model = pickle.load(open('model.pkl', 'rb'))
+model = pickle.load(open('CGPA-IQ-Placement/model.pkl', 'rb'))
 
 st.title("CGPA IQ PLACEMENT")
 
