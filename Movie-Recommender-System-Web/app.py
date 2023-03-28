@@ -2,10 +2,12 @@ import streamlit as st
 import pickle
 import pandas as pd
 import requests
+import shutil
+shutil.unpack_archive('Movie-Recommender-System-Web.zip', 'Movie-Recommender-System-Web')
 
 movies = pickle.load(open('Movie-Recommender-System-Web/movies.pkl','rb'))
 movies = pd.DataFrame(movies)
-similarity = pickle.load(open('similarity.pkl','rb'))
+similarity = pickle.load(open('Movie-Recommender-System-Web/similarity.pkl','rb'))
 
 #print(movies_list['title'].values)
 st.title("Movies Recommender System")
