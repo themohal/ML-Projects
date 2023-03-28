@@ -57,5 +57,6 @@ if st.button('Recommend'):
         st.image(posters[4])
     #for i in movie_name:
     #   st.write(i)
+ 
 
-
+st.write("Muhammad Farjad Ali Raza [link](https://www.linkedin.com/in/farjadaliraza/)")
