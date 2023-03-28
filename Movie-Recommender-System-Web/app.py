@@ -59,4 +59,4 @@ if st.button('Recommend'):
     #   st.write(i)
  
 
-st.write("Muhammad Farjad Ali Raza [link](https://www.linkedin.com/in/farjadaliraza/)")
+st.write("Designed By: [Muhammad Farjad Ali Raza](https://www.linkedin.com/in/farjadaliraza/)")
