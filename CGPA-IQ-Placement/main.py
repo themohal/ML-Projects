@@ -27,9 +27,9 @@ if st.button('Predict'):
     prediction_text=''
     if prediction >=1:
         prediction_text = "Placement is confirmed"
-        st.write(prediction_text)
+        st.success(prediction_text)
     else:
         prediction_text = "Placement is not confirmed"
-        st.write(prediction_text)
+        st.success(prediction_text)
 
 st.write("Designed By: [Muhammad Farjad Ali Raza](https://www.linkedin.com/in/farjadaliraza/)")
