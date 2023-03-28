@@ -4,7 +4,7 @@ import pickle
 import pandas as pd
 
 
-model = pickle.load(open('CGPA-IQ-Placement/model.pkl', 'rb'))
+model = pickle.load(open('model.pkl', 'rb'))
 
 st.title("CGPA IQ PLACEMENT")
 
@@ -27,7 +27,9 @@ if st.button('Predict'):
     prediction_text=''
     if prediction >=1:
         prediction_text = "Placement is confirmed"
-        st.success(prediction_text)
+        st.write(prediction_text)
     else:
         prediction_text = "Placement is not confirmed"
-        st.success(prediction_text)
+        st.write(prediction_text)
+
+st.write("Designed By: [Muhammad Farjad Ali Raza](https://www.linkedin.com/in/farjadaliraza/)")
