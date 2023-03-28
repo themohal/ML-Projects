@@ -8,8 +8,8 @@ model = pickle.load(open('CGPA-IQ-Placement/model.pkl', 'rb'))
 
 st.title("CGPA IQ PLACEMENT")
 
-user_input1 = st.text_input("Enter CGPA :")
-user_input2 = st.text_input("Enter IQ :")
+user_input1 = st.number_input("Enter CGPA :")
+user_input2 = st.number_input("Enter IQ :")
 
 def predict(inp1,inp2):
     '''
