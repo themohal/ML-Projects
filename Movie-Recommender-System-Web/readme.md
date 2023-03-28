@@ -6,4 +6,4 @@ This Movies Recommender System is basically tags based. In this project the TMDB
 *  Calculating similarity 
 *  Getting top 5 similar movies
 
-[Check it out]([https://themohal-ml-projects-movie-recommender-system-webapp-h39jbv.streamlit.app/])
+[Check it out](https://themohal-ml-projects-movie-recommender-system-webapp-h39jbv.streamlit.app)
