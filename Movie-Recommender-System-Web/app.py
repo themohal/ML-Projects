@@ -3,7 +3,7 @@ import pickle
 import pandas as pd
 import requests
 import shutil
-shutil.unpack_archive('Movie-Recommender-System-Web.zip', 'Movie-Recommender-System-Web')
+shutil.unpack_archive('Movie-Recommender-System-Web/Movie-Recommender-System-Web.zip', 'Movie-Recommender-System-Web')
 
 movies = pickle.load(open('Movie-Recommender-System-Web/movies.pkl','rb'))
 movies = pd.DataFrame(movies)
