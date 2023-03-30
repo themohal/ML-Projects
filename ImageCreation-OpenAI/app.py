@@ -7,7 +7,7 @@ api = os.getenv('OPEN_AI_API')
 
 import os
 import openai
-openai.api_key = st.secrets["OPENAI_API_KEY"]
+openai.api_key = st.secrets.OPENAI_API_KEY
 
 st.title("Image Creation Using OpenAI API")
 
