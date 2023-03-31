@@ -23,7 +23,7 @@ if st.button("Create Image"):
         size="512x512"
         )
         st.write(user_input.capitalize())
-        st.image(response['data'][0]['url'], width=512, 
+        st.image(response['data'][0]['url'], use_column_width=True, 
          # Manually Adjust the width of the image as per requirement 
         )
     else:
