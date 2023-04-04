@@ -8,8 +8,8 @@ from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 ps = PorterStemmer()
 
-tfidf = pickle.load(open('vectorizer.pkl','rb'))
-model = pickle.load(open('model.pkl','rb'))
+tfidf = pickle.load(open('SMS-Spam-Detection/vectorizer.pkl','rb'))
+model = pickle.load(open('SMS-Spam-Detection/model.pkl','rb'))
 
 def transform_text(text):
   text = text.lower()
