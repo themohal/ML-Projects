@@ -7,7 +7,7 @@ st.title('Cat Vs Dog Classification')
 
 #adding a file uploader
 class_names = ['Cat','Dog']
-model = keras.models.load_model('./model.h5')
+model = keras.models.load_model('Cats-vs-Dogs/model.h5')
 
 file = st.file_uploader("Please choose a file",type = (["jpg", "jpeg"]))
 
