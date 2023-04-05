@@ -48,4 +48,5 @@ if st.button('Predict'):
         else:
            
            st.success('Not Spam..!') 
-    
+           
+st.write("Developed By: [Muhammad Farjad Ali Raza](https://www.linkedin.com/in/farjadaliraza/)")
