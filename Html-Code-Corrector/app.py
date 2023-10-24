@@ -12,20 +12,19 @@ with open("tokenizer.pkl", "rb") as f:
     tokenizer = pickle.load(f)
 
 # df.to_csv('Html_Code_Correction_Dataset.csv',index=False)
-df = pd.read_csv('/content/Html_Code_Correction_Dataset.csv')
-bad_practices = df['Bad_Practices']
-good_practices = df['Good_Practices']
+df = pd.read_csv("Html_Code_Correction_Dataset.csv")
+bad_practices = df["Bad_Practices"]
+good_practices = df["Good_Practices"]
 
 # Convert texts to sequences and pad them for consistent length
 X_bad = tokenizer.texts_to_sequences(bad_practices)
 X_good = tokenizer.texts_to_sequences(good_practices)
-X = pad_sequences(X_bad + X_good, padding='post')
+X = pad_sequences(X_bad + X_good, padding="post")
 
 # Label bad as 0 and good as 1
 y_bad = [0] * len(X_bad)
 y_good = [1] * len(X_good)
 y = np.array(y_bad + y_good)
-
 
 
 def rectify_html(html_code):
@@ -40,21 +39,22 @@ def rectify_html(html_code):
         "<div custom-attr='value'>": "<div data-custom-attr='value'>",
         "<div id='duplicateID'>": "<div id='uniqueID'>",
         "<img src='http://insecure.com/image.jpg'>": "<img src='https://secure.com/image.jpg'>",
-        "<div>This is div</div>": "<section>This is section</section>"
+        "<div>This is div</div>": "<section>This is section</section>",
     }
     # Replace any matching bad practice in the provided code
     for bad, good in rectifications.items():
         html_code = html_code.replace(bad, good)
     return html_code
 
+
 def predict_and_rectify(html_code):
     # Convert the html_code to a sequence and pad it
     sequence = tokenizer.texts_to_sequences([html_code])
-    padded_sequence = pad_sequences(sequence, maxlen=X.shape[1], padding='post')
-    
+    padded_sequence = pad_sequences(sequence, maxlen=X.shape[1], padding="post")
+
     # Predict
     prediction = model.predict(padded_sequence)
-    
+
     # If it's bad practice (prediction close to 0), rectify it
     if prediction[0][0] < 0.5:
         corrected_html = rectify_html(html_code)
@@ -63,9 +63,7 @@ def predict_and_rectify(html_code):
         return "Good Practice."
 
 
-
-
-st.title('HTML Auto-Correct Tool')
+st.title("HTML Auto-Correct Tool")
 
 user_input = st.text_area("Paste your HTML code:")
 
