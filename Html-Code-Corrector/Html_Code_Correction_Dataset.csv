@@ -1,0 +1,11 @@
+Bad_Practices,Good_Practices
+<p>This is bad,<p>This is good</p>
+<center>Centered content,<div style='text-align: center;'>Centered content</div>
+<div style='color: red'>,<div><span style='color: red'>Red text</span></div>
+<table><tr><td>Layout</td></tr></table>,<div>Layout with CSS</div>
+<img src='image.jpg'>,<img src='image.jpg' alt='Image description'>
+This is content,<div>This is content</div>
+<div custom-attr='value'>,<div data-custom-attr='value'>
+<div id='duplicateID'>,<div id='uniqueID'>
+<img src='http://insecure.com/image.jpg'>,<img src='https://secure.com/image.jpg'>
+<div>This is div</div>,<section>This is section</section>
